@@ -9,7 +9,7 @@ export const loginControllers = {
             const secretJwt = process.env.JWT_SECRET;
 
             if (!user) {
-                return res.status(400).send('User not found')
+                return res.status(400).send('Usuario no registrado')
             }
 
             if (user && bcrypt.compareSync(req.body.password, user.passwordHash)) {
@@ -24,7 +24,7 @@ export const loginControllers = {
                 )
                 res.status(200).send({ user: user.email, token: token })
             } else {
-                res.status(400).send('Wrong password');
+                res.status(400).send('Contraseña incorrecta');
             }
 
         } catch (error) {

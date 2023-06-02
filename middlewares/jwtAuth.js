@@ -9,8 +9,8 @@ export function jwtMiddleware(req, res, next) {
         algorithms: ['HS256']
     }).unless({
         path: [
+            {url: '/users', methods: ['POST']},
             '/login',
-            '/register'
         ]
     })
         (req, res, next);
