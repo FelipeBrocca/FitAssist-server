@@ -37,7 +37,7 @@ export const userControllers = {
 
             const existingUser = await User.findOne({ email });
             if (existingUser) {
-                return res.status(400).json({ error: 'Email already registered' })
+                return res.status(400).send({ message: 'Email ya registrado' })
             }
 
             const newUser = new User({
