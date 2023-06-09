@@ -19,7 +19,7 @@ export const loginControllers = {
                 },
                     secretJwt,
                     {
-                        expiresIn: '1d',
+                        expiresIn: '30d',
                     }
                 )
                 res.status(200).send({ user: user.email, token: token })
