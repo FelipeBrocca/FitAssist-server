@@ -26,6 +26,7 @@ export const environmentControllers = {
     newEnvironment: async (req, res) => {
         try {
             const {
+                name,
                 mainPlace,
                 coach,
                 clients,
@@ -35,6 +36,7 @@ export const environmentControllers = {
             } = req.body;
 
             const newEnvironment = new Environment({
+                name,
                 mainPlace,
                 coach,
                 clients,

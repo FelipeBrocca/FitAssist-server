@@ -1,6 +1,10 @@
 import mongoose from "mongoose";
 
 const environmentSchema = mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
     mainPlace: {
         type: String,
         required: true
@@ -11,8 +15,8 @@ const environmentSchema = mongoose.Schema({
         required: true
     },
     clients: [{
-       type: mongoose.Schema.Types.ObjectId,
-       ref: 'User'
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
     }],
     trainings: [{
         type: mongoose.Schema.Types.ObjectId,
