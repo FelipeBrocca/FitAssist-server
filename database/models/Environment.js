@@ -9,6 +9,12 @@ const environmentSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    mainHour: {
+        type: String
+    },
+    mainDays: {
+        type: Array
+    },
     coach: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
