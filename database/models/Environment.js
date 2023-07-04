@@ -6,8 +6,7 @@ const environmentSchema = mongoose.Schema({
         required: true
     },
     mainPlace: {
-        type: String,
-        required: true
+        type: String
     },
     mainHours: {
         type: Object
