@@ -9,8 +9,8 @@ const environmentSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    mainHour: {
-        type: String
+    mainHours: {
+        type: Object
     },
     mainDays: {
         type: Array

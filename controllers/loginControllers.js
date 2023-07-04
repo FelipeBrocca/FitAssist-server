@@ -15,7 +15,8 @@ export const loginControllers = {
             if (user && bcrypt.compareSync(req.body.password, user.passwordHash)) {
                 const token = jwt.sign({
                     userId: user._id,
-                    isCoach: user.isCoach
+                    isCoach: user.isCoach,
+                    name: user.name
                 },
                     secretJwt,
                     {

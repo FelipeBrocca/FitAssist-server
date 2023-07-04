@@ -32,7 +32,7 @@ export const environmentControllers = {
                 clients,
                 trainings,
                 rating,
-                mainHour,
+                mainHours,
                 mainDays,
                 createdAt
             } = req.body;
@@ -44,7 +44,7 @@ export const environmentControllers = {
                 clients,
                 trainings,
                 rating,
-                mainHour,
+                mainHours,
                 mainDays,
                 createdAt
             });
